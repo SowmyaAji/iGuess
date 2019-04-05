@@ -6,29 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script src="main.js" defer></script>
 </head>
 
 <body>
-    <h1>I Guess!</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 class="text-light">I Guess!</h1>
+        </nav>
+    </header>
+    <div class="container-fluid text-center">
+      <br><br>
+        <div class="main">
+            <h5>Let us see how quickly I can guess a secret number in your head!</h5>
+            <span class="fulltext"><br><br></span>
+            <h5>Think of a number between 1 and 100. And click Y when you are ready to play</h5>
+            <span class="fulltext"><br></span>
+            <button id="yes" type="button" class="btn btn-success"> Y </button>
+        </div>
+        <span class="fulltext"><br></span>
+        <div class="input">
+            <h4>My guess is <input type="text" id="guesses" value="0"></h4>
+        </div>
+        <div class="change">
+        <span class="fulltext"><br></span>
+            <h5>Click > if your number is higher than my guess. Click < if it is lesser. Click = if I have
+                    guessed right!</h5> 
+                    <span class="fulltext"><br><br></span>
+                    <button id="more" type="button" class="btn btn-info"> > </button> <button id="less"
+                        type="button" class="btn btn-warning">
+                        < </button> <button id="equals" class="btn btn-primary"> =
+                    </button>
 
-    <h3>Do you want to play a game with me? Let us see how quickly I can guess a secret number in your head!</h3>
+        </div>
+        <div id="won">
+            <span class="fulltext"><br></span>
+            <h4 class="text-danger">Yay! I won! Play again?</h4>
+             <span class="fulltext"><br></span>
+            <button id="yes2" type="button" class="btn btn-success"> Y </button>
 
-    <p>Think of a number between 1 and 100. And click the Y-button below when you are ready to play! </p>
-
-    <button id="yes"> Y </button>
-
-    <p>My guess is <input type="text" id="guesses" value="0"></p>
-    <p>Click the '>'' button below if your number is higher than my guess. Click the '<
-            ' button if my guess is lesser than your number. Click the " = " button, if I
-            have guessed right!</p> <button id="more"> > </button> <button id="less">
-                < </button> <button id="equals"> =
-            </button>
-
-
-            <div id="won">
-                <p>Yay! I won!</p>
-
-            </div>
+        </div>
+       
+    </div>
 </body>

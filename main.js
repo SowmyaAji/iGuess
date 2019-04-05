@@ -40,8 +40,10 @@ $("#less").on('click', function () {
 
 
 
-
-
+//reload the game
+$(document).on("click", "#yes2", function () {
+    location.reload(true);
+});
 
 
 
