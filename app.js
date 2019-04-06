@@ -1,4 +1,4 @@
-//hide the victory message
+//hide the victory message till needed
 $("#won").hide();
 
 
@@ -16,6 +16,7 @@ $("#yes").on("click", function () {
     counter = counter + 1
     $("#count").val(counter)
     console.log(counter)
+    seventhCount()
 })
 
 
@@ -25,6 +26,7 @@ $("#equals").on('click', function () {
     $("#won").show();
 })
 
+
 //if secret number more than guess
 $("#more").on('click', function () {
     startpoint = midpoint
@@ -32,8 +34,7 @@ $("#more").on('click', function () {
     $("#guesses").val(midpoint)
     counter = counter + 1
     $("#count").val(counter)
-
-
+    seventhCount()
 
 })
 
@@ -44,9 +45,19 @@ $("#less").on('click', function () {
     $("#guesses").val(midpoint)
     counter = counter + 1
     $("#count").val(counter)
+    seventhCount()
+
 
 })
 
+//if someone cheats
+function seventhCount() {
+    if (counter > 7) {
+        console.log(counter)
+        $("#cheat").show();
+    }
+
+}
 
 
 //reload the game
